@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ws.ieo.org.tr/NobetWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ws.ieo.org.tr/NobetWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">İstanbul Eczacı Odasi Nobet Listeleme Web Servisidir... Created by Bilgi İşlem Birimi</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ws.ieo.org.tr/NobetWebService/">
+      <s:element name="getIlceler">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getIlcelerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getIlcelerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEcz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEczResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEczResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baslangicTarihi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bitisTarihi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ilceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNobetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobetPR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baslangicTarihi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bitisTarihi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ilceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobetPRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNobetPRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobetILS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baslangicTarihi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bitisTarihi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ilceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobetILSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNobetILSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobetTEB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baslangicTarihi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bitisTarihi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ilceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNobetTEBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNobetTEBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getIlcelerSoapIn">
+    <wsdl:part name="parameters" element="tns:getIlceler" />
+  </wsdl:message>
+  <wsdl:message name="getIlcelerSoapOut">
+    <wsdl:part name="parameters" element="tns:getIlcelerResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEczSoapIn">
+    <wsdl:part name="parameters" element="tns:getEcz" />
+  </wsdl:message>
+  <wsdl:message name="getEczSoapOut">
+    <wsdl:part name="parameters" element="tns:getEczResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNobetSoapIn">
+    <wsdl:part name="parameters" element="tns:getNobet" />
+  </wsdl:message>
+  <wsdl:message name="getNobetSoapOut">
+    <wsdl:part name="parameters" element="tns:getNobetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNobetPRSoapIn">
+    <wsdl:part name="parameters" element="tns:getNobetPR" />
+  </wsdl:message>
+  <wsdl:message name="getNobetPRSoapOut">
+    <wsdl:part name="parameters" element="tns:getNobetPRResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNobetILSSoapIn">
+    <wsdl:part name="parameters" element="tns:getNobetILS" />
+  </wsdl:message>
+  <wsdl:message name="getNobetILSSoapOut">
+    <wsdl:part name="parameters" element="tns:getNobetILSResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNobetTEBSoapIn">
+    <wsdl:part name="parameters" element="tns:getNobetTEB" />
+  </wsdl:message>
+  <wsdl:message name="getNobetTEBSoapOut">
+    <wsdl:part name="parameters" element="tns:getNobetTEBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="nobetWebServiceSoap">
+    <wsdl:operation name="getIlceler">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Nobetler Ilceleri...&lt;br /&gt;&lt;br /&gt;&lt;u&gt;&lt;b&gt;ALDIGI 2 PARAMETRE&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;&lt;b&gt;userName :&lt;/b&gt; Kullanıcı Adınız (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;userPass :&lt;/b&gt; Sifreniz (Oda Bilgi İslem Birimimizden ogreniniz)</wsdl:documentation>
+      <wsdl:input message="tns:getIlcelerSoapIn" />
+      <wsdl:output message="tns:getIlcelerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEcz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eczane Bilgileri...&lt;br /&gt;&lt;br /&gt;&lt;u&gt;&lt;b&gt;ALDIGI 2 PARAMETRE&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;&lt;b&gt;userName :&lt;/b&gt; Kullanıcı Adınız (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;userPass :&lt;/b&gt; Sifreniz (Oda Bilgi İslem Birimimizden ogreniniz)</wsdl:documentation>
+      <wsdl:input message="tns:getEczSoapIn" />
+      <wsdl:output message="tns:getEczSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNobet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Tarih Bazinda Nobetler...&lt;br /&gt;&lt;br /&gt;&lt;u&gt;&lt;b&gt;ALDIGI 5 PARAMETRE&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;&lt;b&gt;userName :&lt;/b&gt; Kullanıcı Adınız (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;userPass :&lt;/b&gt; Sifreniz (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;baslangicTarihi :&lt;/b&gt; Nobet listelemesine baslanilacak tarih. Formati : YYYY-MM-DD (örn. 2007-09-18)&lt;br /&gt;&lt;b&gt;bitisTarihi :&lt;/b&gt; Nobet listelemesinin bitirilecegi tarih. Formati : YYYY-MM-DD (örn. 2007-09-19)&lt;br /&gt;&lt;b&gt;ilceID :&lt;/b&gt; Tum ilceler icin 0 gonderiniz.</wsdl:documentation>
+      <wsdl:input message="tns:getNobetSoapIn" />
+      <wsdl:output message="tns:getNobetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNobetPR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Tarih Bazinda Nobetler...&lt;br /&gt;&lt;br /&gt;&lt;u&gt;&lt;b&gt;ALDIGI 5 PARAMETRE&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;&lt;b&gt;userName :&lt;/b&gt; Kullanıcı Adınız (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;userPass :&lt;/b&gt; Sifreniz (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;baslangicTarihi :&lt;/b&gt; Nobet listelemesine baslanilacak tarih. Formati : YYYY-MM-DD (örn. 2007-09-18)&lt;br /&gt;&lt;b&gt;bitisTarihi :&lt;/b&gt; Nobet listelemesinin bitirilecegi tarih. Formati : YYYY-MM-DD (örn. 2007-09-19)&lt;br /&gt;&lt;b&gt;ilceID :&lt;/b&gt; Tum ilceler icin 0 gonderiniz.</wsdl:documentation>
+      <wsdl:input message="tns:getNobetPRSoapIn" />
+      <wsdl:output message="tns:getNobetPRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNobetILS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Tarih Bazinda Nobetler...&lt;br /&gt;&lt;br /&gt;&lt;u&gt;&lt;b&gt;ALDIGI 5 PARAMETRE&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;&lt;b&gt;userName :&lt;/b&gt; Kullanıcı Adınız (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;userPass :&lt;/b&gt; Sifreniz (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;baslangicTarihi :&lt;/b&gt; Nobet listelemesine baslanilacak tarih. Formati : YYYY-MM-DD (örn. 2007-09-18)&lt;br /&gt;&lt;b&gt;bitisTarihi :&lt;/b&gt; Nobet listelemesinin bitirilecegi tarih. Formati : YYYY-MM-DD (örn. 2007-09-19)&lt;br /&gt;&lt;b&gt;ilceID :&lt;/b&gt; Tum ilceler icin 0 gonderiniz.</wsdl:documentation>
+      <wsdl:input message="tns:getNobetILSSoapIn" />
+      <wsdl:output message="tns:getNobetILSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNobetTEB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Tarih Bazinda Nobetler...&lt;br /&gt;&lt;br /&gt;&lt;u&gt;&lt;b&gt;ALDIGI 5 PARAMETRE&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;&lt;b&gt;userName :&lt;/b&gt; Kullanıcı Adınız (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;userPass :&lt;/b&gt; Sifreniz (Oda Bilgi İslem Birimimizden ogreniniz)&lt;br /&gt;&lt;b&gt;baslangicTarihi :&lt;/b&gt; Nobet listelemesine baslanilacak tarih. Formati : YYYY-MM-DD (örn. 2007-09-18)&lt;br /&gt;&lt;b&gt;bitisTarihi :&lt;/b&gt; Nobet listelemesinin bitirilecegi tarih. Formati : YYYY-MM-DD (örn. 2007-09-19)&lt;br /&gt;&lt;b&gt;ilceID :&lt;/b&gt; Tum ilceler icin 0 gonderiniz.</wsdl:documentation>
+      <wsdl:input message="tns:getNobetTEBSoapIn" />
+      <wsdl:output message="tns:getNobetTEBSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="nobetWebServiceSoap" type="tns:nobetWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getIlceler">
+      <soap:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getIlceler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEcz">
+      <soap:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getEcz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobet">
+      <soap:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobetPR">
+      <soap:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobetPR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobetILS">
+      <soap:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobetILS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobetTEB">
+      <soap:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobetTEB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="nobetWebServiceSoap12" type="tns:nobetWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getIlceler">
+      <soap12:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getIlceler" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEcz">
+      <soap12:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getEcz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobet">
+      <soap12:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobetPR">
+      <soap12:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobetPR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobetILS">
+      <soap12:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobetILS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNobetTEB">
+      <soap12:operation soapAction="http://ws.ieo.org.tr/NobetWebService/getNobetTEB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="nobetWebService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">İstanbul Eczacı Odasi Nobet Listeleme Web Servisidir... Created by Bilgi İşlem Birimi</wsdl:documentation>
+    <wsdl:port name="nobetWebServiceSoap" binding="tns:nobetWebServiceSoap">
+      <soap:address location="http://ws.ieo.org.tr/NobetWebService/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="nobetWebServiceSoap12" binding="tns:nobetWebServiceSoap12">
+      <soap12:address location="http://ws.ieo.org.tr/NobetWebService/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
