@@ -45,6 +45,7 @@ namespace NobetciEczane_IEO
             {
                 Log.Error(ex, "Hata");
             }
+
         }
 
 
